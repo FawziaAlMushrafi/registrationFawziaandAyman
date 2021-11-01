@@ -25,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         }
         else if (pass1!=pass2){
             binding.massage.text = "password is not same"
-        } else {
+        }
+        else if (!email.contains('@',)&&!email.contains(".com")){
+            binding.massage.text = "email is not correct"
+        }
+        else {
             binding.massage.text = "${name}\n${email}"
 
         }
